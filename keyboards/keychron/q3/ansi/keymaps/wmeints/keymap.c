@@ -109,6 +109,7 @@ layer_state_t layer_state_set_user(layer_state_t state) {
 }
 
 void keyboard_post_init_user(void) {
+    rgb_matrix_enable();
     rgb_matrix_mode(RGB_MATRIX_SPLASH);
     rgb_matrix_sethsv(0, 0, 255); // White splash on black
 }
