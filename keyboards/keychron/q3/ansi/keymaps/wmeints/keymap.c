@@ -101,7 +101,7 @@ layer_state_t layer_state_set_user(layer_state_t state) {
             break;
         case WIN_VSC:
             rgb_matrix_mode(RGB_MATRIX_SOLID_COLOR);
-            rgb_matrix_sethsv(HSV_RED); // Green for Visual Studio Code
+            rgb_matrix_sethsv(HSV_RED); // Red for Visual Studio Code
             break;
     }
 
