@@ -77,24 +77,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         _______,  _______,  _______,                                _______,                                _______,  _______,  _______,    _______,  _______,  _______,  _______),
 };
 
-bool rgb_matrix_indicators_user(void) {
-    switch(get_highest_layer(layer_state)) {
-        case MAC_BASE:
-        case WIN_BASE:
-            rgb_matrix_set_color_all(RGB_PURPLE);
-            break;
-        case MAC_FN:
-        case WIN_FN:
-            rgb_matrix_set_color_all(RGB_GOLDENROD);
-            break;
-        case WIN_VSC:
-            rgb_matrix_set_color_all(RGB_RED);
-            break;
-    }
-
-    uint8_t led_index;
-    rgb_matrix_map_row_column_to_led(0,0, &led_index);
-    rgb_matrix_set_color(led_index, RGB_RED);
-
-    return false;
+void keyboard_post_init_user(void) {
+    rgb_matrix_mode(RGB_MATRIX_SPLASH);
+    rgb_matrix_sethsv(0, 0, 255); // White splash on black
 }

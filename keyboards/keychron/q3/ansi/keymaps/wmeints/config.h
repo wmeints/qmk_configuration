@@ -1,1 +1,3 @@
 #define TAPPING_TERM 200
+#define ENABLE_RGB_MATRIX_SPLASH
+
